@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="orbGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="orbGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3"/>
+      <circle cx="40" cy="40" r="1" fill="#475569" fill-opacity="0.5"/>
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes floatOrb1 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(60px, 30px) scale(1.15); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translate(0px, 0px) scale(1.1); }
+      50% { transform: translate(-50px, -25px) scale(0.95); }
+      100% { transform: translate(0px, 0px) scale(1.1); }
+    }
+    @keyframes pulseBeam {
+      0% { stroke-dashoffset: 400; opacity: 0.2; }
+      50% { opacity: 0.85; }
+      100% { stroke-dashoffset: 0; opacity: 0.2; }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-100px); opacity: 0; }
+      30% { opacity: 0.6; }
+      70% { opacity: 0.6; }
+      100% { transform: translateY(460px); opacity: 0; }
+    }
+    @keyframes pillBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .orb1 { animation: floatOrb1 10s ease-in-out infinite; }
+    .orb2 { animation: floatOrb2 12s ease-in-out infinite; }
+    .beam { stroke-dasharray: 80 120; animation: pulseBeam 4s linear infinite; }
+    .beam2 { stroke-dasharray: 60 140; animation: pulseBeam 5s linear infinite reverse; }
+    .scanner { animation: scanline 6s linear infinite; }
+    .pill1 { animation: pillBounce 4s ease-in-out infinite; }
+    .pill2 { animation: pillBounce 4.5s ease-in-out infinite 0.5s; }
+    .pill3 { animation: pillBounce 5s ease-in-out infinite 1s; }
+    .pill4 { animation: pillBounce 4.2s ease-in-out infinite 1.5s; }
+    .pill5 { animation: pillBounce 4.8s ease-in-out infinite 2s; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="420" fill="url(#bgGrad)"/>
+  <rect width="1200" height="420" fill="url(#grid)"/>
+
+  <!-- Dynamic Animated Orbs (Deep in background) -->
+  <g class="orb1">
+    <circle cx="200" cy="120" r="160" fill="url(#orbGrad1)"/>
+  </g>
+  <g class="orb2">
+    <circle cx="1020" cy="280" r="190" fill="url(#orbGrad2)"/>
+  </g>
+
+  <!-- Dynamic Circuit / Wave Lines -->
+  <g opacity="0.6">
+    <path class="beam" d="M 0 320 Q 300 240, 600 320 T 1200 320" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <path class="beam2" d="M 0 100 Q 400 180, 800 100 T 1200 120" fill="none" stroke="#818cf8" stroke-width="2"/>
+  </g>
+
+  <!-- Dynamic Scanning Beam Indicator (subtle) -->
+  <line class="scanner" x1="0" y1="0" x2="1200" y2="0" stroke="url(#accentGrad)" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Border Frame -->
+  <rect x="16" y="16" width="1168" height="388" rx="16" fill="none" stroke="#334155" stroke-width="1.2" stroke-opacity="0.6"/>
+
+  <!-- Top Decorative Header / Terminal Dots -->
+  <g transform="translate(48, 48)">
+    <circle cx="0" cy="0" r="5.5" fill="#ef4444" opacity="0.8"/>
+    <circle cx="18" cy="0" r="5.5" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="36" cy="0" r="5.5" fill="#10b981" opacity="0.8"/>
+    <text x="60" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#64748b" font-weight="600" letter-spacing="1.5">DEV TOOLS &amp; CODE ANALYSIS SUITE</text>
+  </g>
+
+  <!-- MAIN FOREGROUND TITLE & SUBTITLE (Guaranteed on top) -->
+  <g transform="translate(600, 165)" text-anchor="middle">
+    <!-- Main Title -->
+    <text y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif" font-size="44" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
+      Awesome Developer Tools &amp; Code Analysis
+    </text>
+    
+    <!-- Gradient Subtitle Bar -->
+    <text y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif" font-size="20" font-weight="600" fill="url(#accentGrad)" letter-spacing="0.2">
+      Curated Ecosystem of Static Analysis, SAST, Code Metrics &amp; AST Intelligence
+    </text>
+
+    <!-- Tagline -->
+    <text y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif" font-size="14.5" font-weight="400" fill="#94a3b8">
+      Auditing code health, complexity, and security across IDEs, AI coding agents, and CI/CD pipelines
+    </text>
+  </g>
+
+  <!-- Foreground Feature Pills (Bottom Layer) -->
+  <g transform="translate(600, 310)" text-anchor="middle">
+    <!-- Pill 1: SAST -->
+    <g class="pill1" transform="translate(-400, 0)">
+      <rect x="-65" y="-16" width="130" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#38bdf8">🛡️ SAST &amp; Security</text>
+    </g>
+
+    <!-- Pill 2: AST Analysis -->
+    <g class="pill2" transform="translate(-200, 0)">
+      <rect x="-70" y="-16" width="140" height="32" rx="16" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc">🌳 AST Intelligence</text>
+    </g>
+
+    <!-- Pill 3: Code Metrics -->
+    <g class="pill3" transform="translate(0, 0)">
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="1.2" opacity="0.95"/>
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#d8b4fe">📊 Quality &amp; Metrics</text>
+    </g>
+
+    <!-- Pill 4: Linters -->
+    <g class="pill4" transform="translate(200, 0)">
+      <rect x="-70" y="-16" width="140" height="32" rx="16" fill="#1e293b" stroke="#f472b6" stroke-width="1.2" opacity="0.95"/>
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#f472b6">⚡ Rust Linters</text>
+    </g>
+
+    <!-- Pill 5: AI & CI/CD -->
+    <g class="pill5" transform="translate(400, 0)">
+      <rect x="-65" y="-16" width="130" height="32" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#34d399">🤖 AI Autofix</text>
+    </g>
+  </g>
+</svg>
