@@ -32,79 +32,31 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saashosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Support & Share](#support--share)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global Static Code Analysis & SAST market is estimated at approximately **$1.5B – $2.1B in 2026**, growing at a CAGR of ~17% to 22% propelled by DevSecOps automation, AI-assisted code generation, and compliance mandates. The market is **moderately concentrated yet intensely competitive**: an upper tier of enterprise AppSec and quality incumbents (Snyk, SonarSource, Veracode, Black Duck, Checkmarx) commands major regulated enterprise contracts, coexisting with a vibrant, fragmented long tail of developer-first and open-source-driven innovators.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[SonarQube Cloud (SonarCloud)](https://sonarsource.com)**  
-
-  Cloud continuous code quality and security analysis service offering Clean-as-You-Code quality gates, cognitive complexity tracking, taint analysis, and PR decoration across 30+ languages.
-
-
-
-- **[Snyk Code](https://snyk.io)**  
-
-  Real-time AI-powered Static Application Security Testing (SAST) platform delivering instant IDE diagnostics, semantic data-flow tracing, and automated pull-request fixes.
-
-
-
-- **[DeepSource](https://deepsource.com)**  
-
-  Automated code health and static analysis platform detecting bug risks, anti-patterns, security flaws, and test-coverage drops with Autofix™ pull requests.
-
-
-
-- **[Codacy](https://codacy.com)**  
-
-  Cloud code review and quality governance platform aggregating static analysis, security scanning, duplication metrics, and complexity trends across engineering teams.
-
-
-
-- **[Code Climate (Qlty Cloud)](https://qlty.sh)**  
-
-  Cloud maintainability, code coverage, and multi-linter orchestration platform enforcing consistent code quality standards and automated PR feedback.
-
-
-
-- **[Semgrep AppSec Platform](https://semgrep.dev)**  
-
-  Managed enterprise static analysis, supply-chain reachability, and secrets governance platform featuring AI-assisted triage and centralized rule policies.
-
-
-
-- **[Veracode Static Analysis](https://veracode.com)**  
-
-  Enterprise cloud application security suite performing binary and source-level static code analysis, compliance reporting, and IDE remediation guidance.
-
-
-
-- **[Checkmarx One](https://checkmarx.com)**  
-
-  Cloud-native enterprise AppSec platform unifying SAST, Infrastructure-as-Code scanning, API security, and supply-chain analysis across the SDLC.
-
-
-
-- **[Synopsys / Black Duck Coverity Cloud](https://blackduck.com)**  
-
-  Industrial-grade path-sensitive static analysis platform specialized in uncovering deep concurrency, memory-safety, and defect risks in C, C++, C#, Java, and embedded code.
-
-
-
-- **[CAST Highlight](https://castsoftware.com)**  
-
-  Software intelligence and portfolio analysis SaaS measuring technical debt, cloud-readiness, open-source licensing risk, and green software impact across enterprise applications.
+| Company / Product | Company Size (Valuation / Revenue) | Starting Tier Pricing | Free Tier / Trial Limits | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Snyk Code](https://snyk.io)** | **$7.4B valuation** (~$300M+ ARR) | $25 / contributing developer / month (Team plan; 5-dev min) | Free forever: 100 SAST tests/mo, 200–400 SCA tests/mo, unlimited users | Real-time AI-powered Static Application Security Testing (SAST) platform delivering instant IDE diagnostics, semantic data-flow tracing, and automated pull-request fixes. |
+| **[SonarQube Cloud (SonarCloud)](https://sonarsource.com)** | **$4.7B valuation** (~$100M–$140M revenue) | $34 / month (Team plan for up to 100,000 LOC) | Free forever: Up to 50,000 LOC for private repos; unlimited LOC for public open-source repos | Cloud continuous code quality and security analysis service offering Clean-as-You-Code quality gates, cognitive complexity tracking, taint analysis, and PR decoration across 30+ languages. |
+| **[Veracode Static Analysis](https://veracode.com)** | **$2.5B valuation** (~$200M–$225M ARR) | ~$15,000 / year (entry application tier; unlimited devs) | No self-service free tier or trial; guided enterprise proof-of-concept (PoC) demo available upon request | Enterprise cloud application security suite performing binary and source-level static code analysis, compliance reporting, and IDE remediation guidance. |
+| **[Synopsys / Black Duck Coverity Cloud](https://blackduck.com)** | **$2.1B valuation** (~$500M revenue) | ~$50,000 / year (~$800–$1,500 / dev / year enterprise baseline) | No commercial free tier/trial (custom sales PoC); free Coverity Scan service available exclusively for public open-source projects | Industrial-grade path-sensitive static analysis platform specialized in uncovering deep concurrency, memory-safety, and defect risks in C, C++, C#, Java, and embedded code. |
+| **[Checkmarx One](https://checkmarx.com)** | **$1.15B valuation** (~$210M–$280M revenue) | ~$30,000 / year (~$1,000 / dev / year entry baseline) | No self-service free tier or trial; custom enterprise proof-of-concept (PoC) available via sales | Cloud-native enterprise AppSec platform unifying SAST, Infrastructure-as-Code scanning, API security, and supply-chain analysis across the SDLC. |
+| **[Semgrep AppSec Platform](https://semgrep.dev)** | **~$500M–$722M valuation** ($204M funding, ~$33M ARR) | $30 / developer / month (Team plan for Semgrep Code) | Free forever: Up to 10 monthly contributors, 10 private repositories, and 60 AI credits/mo | Managed enterprise static analysis, supply-chain reachability, and secrets governance platform featuring AI-assisted triage and centralized rule policies. |
+| **[Code Climate (Qlty Cloud)](https://qlty.sh)** | **$200M valuation** ($68M Code Climate funding / $7.5M Qlty funding) | $20 / contributor / month (Pro plan; billed annually/monthly) | Free forever: Unlimited contributors, 1,000 analysis minutes/month, and 100 AI autofixes/month | Cloud maintainability, code coverage, and multi-linter orchestration platform enforcing consistent code quality standards and automated PR feedback. |
+| **[CAST Highlight](https://castsoftware.com)** | **~€137M buyout baseline** (~$50M+ CAST Group revenue) | $6,800 (€6,300) / year (1 named application baseline) | 14-day free trial; permits analyzing custom application code with access capped at 25% of portal insights | Software intelligence and portfolio analysis SaaS measuring technical debt, cloud-readiness, open-source licensing risk, and green software impact across enterprise applications. |
+| **[Codacy](https://codacy.com)** | **$32.5M funding** (~$7.3M–$18.2M revenue) | $18 / developer / month (Team plan, billed annually) | Free forever: Free for open-source public repos; 14-day full free trial for private repos (no credit card required) | Cloud code review and quality governance platform aggregating static analysis, security scanning, duplication metrics, and complexity trends across engineering teams. |
+| **[DeepSource](https://deepsource.com)** | **$10.6M funding** (~$2M–$3.2M ARR) | $10 / user / month (Team plan, billed annually) | Free forever: Up to 3 private repositories and 3 team members; free for public open-source repositories (up to 1,000 PR reviews/month) | Automated code health and static analysis platform detecting bug risks, anti-patterns, security flaws, and test-coverage drops with Autofix™ pull requests. |
 
 
 
